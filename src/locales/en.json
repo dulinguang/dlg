@@ -3,6 +3,16 @@
       "HomePage": "Home",
       "TwoPage": "Company Introduction"
     },
+    "HomePageSmallLabel": {
+        "option1":"magazine",
+        "option2":"story",
+        "option3":"选项3"
+      },
+    "TwoPageSmallLabel": {
+        "option1":"服装en",
+        "option2":"鞋子en",
+        "option3":"配件en"
+    },
     "HomePage": {
       "title": "Welcome to our foreign trade website",
       "description": "We are committed to providing high-quality products and services to global customers.",

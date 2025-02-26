@@ -1,80 +1,94 @@
 <template>
   <div id="app">
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <!-- 可以添加公司 logo -->
-          <img src="./assets/images/logo.png" alt="Company Logo">
+    <nav>
+      <!-- 首页下拉菜单 -->
+      <div class="dropdown"  @mouseenter="showHomeDropdown = true" @mouseleave="showHomeDropdown = false">
+        <router-link to="/Home">{{ $t('navigation.HomePage') }}</router-link>
+        <div v-if="showHomeDropdown" class="dropdown-content">
+          <a href="#">{{ $t('HomePageSmallLabel.option1') }}</a>
+          <a href="#">{{ $t('HomePageSmallLabel.option2') }}</a>
+            <a href="#">{{ $t('HomePageSmallLabel.option3') }}</a>
         </div>
-        <ul class="nav-links">
-          <li><router-link to="/Home">{{ $t('navigation.HomePage') }}</router-link></li>
-          <li><router-link to="/Company">{{ $t('navigation.TwoPage') }}</router-link></li>
-          <li><router-link to="/Product">{{ $t('navigation.TwoPage') }}3</router-link></li>
-          <!-- 可以根据需要添加更多页码链接 -->
-        </ul>
-        <div class="language-switcher">
-          <select v-model="$i18n.locale">
-            <option value="zh">中文</option>
-            <option value="en">English</option>
-          </select>
+      </div>
+      <!-- 产品下拉菜单 -->
+      <div class="dropdown" @mouseenter="showProductDropdown = true" @mouseleave="showProductDropdown = false">
+        <router-link to="/Company" >{{ $t('navigation.TwoPage') }}</router-link>
+        <div v-if="showProductDropdown" class="dropdown-content">
+          <a href="#">{{ $t('TwoPageSmallLabel.option1') }}</a>
+          <a href="#">{{ $t('TwoPageSmallLabel.option2') }}</a>
+          <a href="#">{{ $t('TwoPageSmallLabel.option3') }}</a>
         </div>
-      </nav>
-    </header>
-    <main>
-      <router-view />
-    </main>
-    <footer>
-      <p>&copy; 2025 Company Name. All rights reserved.</p>
-    </footer>
+      </div>
+      <!-- 语言选择 -->
+      <select v-model="$i18n.locale">
+        <option value="zh">中文</option>
+        <option value="en">英文</option>
+      </select>
+    </nav>
+    <router-view />
   </div>
 </template>
 
 <script setup>
-// 这里可以编写组件的逻辑代码
+import { ref } from 'vue';
+
+// 控制首页下拉菜单的显示和隐藏
+const showHomeDropdown = ref(false);
+// 控制产品下拉菜单的显示和隐藏
+const showProductDropdown = ref(false);
 </script>
 
-<style scoped>
-header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo img {
-  height: 40px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin: 0 10px;
-}
-
-.language-switcher {
-  margin-left: 20px;
-}
-
-main {
-  padding: 20px 0;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  padding: 10px 0;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+nav a.router-link-active {
+  font-weight: bold;
+}
+
+/* 下拉菜单样式 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 </style>
