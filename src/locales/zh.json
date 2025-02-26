@@ -1,0 +1,14 @@
+{
+    "navigation": {
+      "HomePage": "首页 11",
+      "TwoPage": "首页 22"
+    },
+    "HomePage": {
+      "title": "这是首页 1 的内容",
+      "description": "这里是首页 1 的具体描述信息。"
+    },
+    "TwoPage": {
+      "title": "这是首页 2 的内容",
+      "description": "这里是首页 2 的具体描述信息。"
+    }
+  }

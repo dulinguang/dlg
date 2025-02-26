@@ -1,0 +1,14 @@
+{
+    "navigation": {
+      "HomePage": "Home Page 1",
+      "TwoPage": "Home Page 2"
+    },
+    "HomePage": {
+      "title": "This is the content of Home Page 1",
+      "description": "Here is the specific description of Home Page 1."
+    },
+    "TwoPage": {
+      "title": "This is the content of Home Page 2",
+      "description": "Here is the specific description of Home Page 2."
+    }
+  }
