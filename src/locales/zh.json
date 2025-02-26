@@ -1,14 +1,26 @@
 {
     "navigation": {
-      "HomePage": "首页 11",
-      "TwoPage": "首页 22"
+      "HomePage": "首页",
+      "TwoPage": "公司介绍"
     },
     "HomePage": {
-      "title": "这是首页 1 的内容",
-      "description": "这里是首页 1 的具体描述信息。"
+      "title": "欢迎来到我们的外贸网站",
+      "description": "我们致力于为全球客户提供优质的产品和服务。",
+      "feature1Title": "高品质产品",
+      "feature1Description": "我们严格把控产品质量，确保每一件产品都符合国际标准。",
+      "feature2Title": "专业团队",
+      "feature2Description": "我们拥有一支经验丰富、专业的团队，能够为客户提供全方位的服务。",
+      "feature3Title": "快速交付",
+      "feature3Description": "我们拥有高效的物流系统，能够确保产品快速、安全地送达客户手中。"
     },
     "TwoPage": {
-      "title": "这是首页 2 的内容",
-      "description": "这里是首页 2 的具体描述信息。"
+      "title": "公司介绍",
+      "description": "了解我们公司的发展历程和核心价值观。",
+      "companyHistoryTitle": "公司历史",
+      "companyHistoryDescription": "我们公司成立于[成立年份]，经过多年的发展，已经成为行业内的领先企业。",
+      "companyValuesTitle": "公司价值观",
+      "companyValue1": "诚信经营",
+      "companyValue2": "客户至上",
+      "companyValue3": "创新发展"
     }
   }

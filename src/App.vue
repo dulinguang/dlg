@@ -1,15 +1,31 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/Home">{{ $t('navigation.HomePage') }}</router-link>
-      <router-link to="/Company">{{ $t('navigation.TwoPage') }}</router-link>
-      <!-- 可以根据需要添加更多页码链接 -->
-       <select v-model="$i18n.locale">
-        <option value="zh">中文</option>
-        <option value="en">英文</option>
-      </select>
-    </nav>
-    <router-view />
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <!-- 可以添加公司 logo -->
+          <img src="./assets/images/logo.png" alt="Company Logo">
+        </div>
+        <ul class="nav-links">
+          <li><router-link to="/Home">{{ $t('navigation.HomePage') }}</router-link></li>
+          <li><router-link to="/Company">{{ $t('navigation.TwoPage') }}</router-link></li>
+          <li><router-link to="/Product">{{ $t('navigation.TwoPage') }}3</router-link></li>
+          <!-- 可以根据需要添加更多页码链接 -->
+        </ul>
+        <div class="language-switcher">
+          <select v-model="$i18n.locale">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <router-view />
+    </main>
+    <footer>
+      <p>&copy; 2025 Company Name. All rights reserved.</p>
+    </footer>
   </div>
 </template>
 
@@ -17,27 +33,48 @@
 // 这里可以编写组件的逻辑代码
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
 }
 
-nav {
-  margin-bottom: 20px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-nav a {
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
   margin: 0 10px;
-  text-decoration: none;
-  color: #007bff;
 }
 
-nav a.router-link-active {
-  font-weight: bold;
+.language-switcher {
+  margin-left: 20px;
+}
+
+main {
+  padding: 20px 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
 }
 </style>

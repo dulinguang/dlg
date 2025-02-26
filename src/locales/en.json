@@ -1,14 +1,26 @@
 {
     "navigation": {
-      "HomePage": "Home Page 1",
-      "TwoPage": "Home Page 2"
+      "HomePage": "Home",
+      "TwoPage": "Company Introduction"
     },
     "HomePage": {
-      "title": "This is the content of Home Page 1",
-      "description": "Here is the specific description of Home Page 1."
+      "title": "Welcome to our foreign trade website",
+      "description": "We are committed to providing high-quality products and services to global customers.",
+      "feature1Title": "High-quality products",
+      "feature1Description": "We strictly control the product quality to ensure that every product meets international standards.",
+      "feature2Title": "Professional team",
+      "feature2Description": "We have an experienced and professional team that can provide customers with all-round services.",
+      "feature3Title": "Rapid delivery",
+      "feature3Description": "We have an efficient logistics system that can ensure the rapid and safe delivery of products to customers."
     },
     "TwoPage": {
-      "title": "This is the content of Home Page 2",
-      "description": "Here is the specific description of Home Page 2."
+      "title": "Company Introduction",
+      "description": "Learn about the development history and core values of our company.",
+      "companyHistoryTitle": "Company History",
+      "companyHistoryDescription": "Our company was founded in [Year of establishment]. After years of development, it has become a leading enterprise in the industry.",
+      "companyValuesTitle": "Company Values",
+      "companyValue1": "Integrity in business",
+      "companyValue2": "Customer first",
+      "companyValue3": "Innovation and development"
     }
   }
