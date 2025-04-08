@@ -12,6 +12,21 @@
         <li>{{ $t('TwoPage.companyValue2') }}</li>
         <li>{{ $t('TwoPage.companyValue3') }}</li>
       </ul>
+      <div>1</div>
+      <div>2</div>
+      <ul>
+        <li>{{ $t('TwoPage.companyValue1') }}</li>
+        <li>{{ $t('TwoPage.companyValue2') }}</li>
+        <li>{{ $t('TwoPage.companyValue3') }}</li>
+      </ul>
+      <div>2</div>
+      <div>3</div>
+      <ul>
+        <li>{{ $t('TwoPage.companyValue1') }}</li>
+        <li>{{ $t('TwoPage.companyValue2') }}</li>
+        <li>{{ $t('TwoPage.companyValue3') }}</li>
+      </ul>
+      <div>4</div>
     </div>
   </div>
 </template>

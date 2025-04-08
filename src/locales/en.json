@@ -32,5 +32,13 @@
       "companyValue1": "Integrity in business",
       "companyValue2": "Customer first",
       "companyValue3": "Innovation and development"
+    },
+    "buttons": {
+      "contactUs": "Contact Us",
+      "cart": "Cart",
+      "login": "Login"
+    },
+    "search": {
+      "placeholder": "Search..."
     }
   }

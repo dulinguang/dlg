@@ -33,5 +33,13 @@
       "companyValue1": "诚信经营",
       "companyValue2": "客户至上",
       "companyValue3": "创新发展"
+    },
+    "buttons": {
+      "contactUs": "联系我们",
+      "cart": "购物车",
+      "login": "登录"
+    },
+    "search": {
+      "placeholder": "搜索..."
     }
   }
